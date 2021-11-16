@@ -1,1 +1,330 @@
-Testing pages.
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta name="robots" content="noarchive" />
+
+		<title>blandcss - A tasteless css boilerplate</title>
+		<link rel="stylesheet" href="blandcss.min.css" />
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+	</head>
+	<body class="noise">
+		<header id="site-header">
+			<h1>Blandcss</h1>
+			<p>Blandcss is a small set of stylesheets which meant to be used as a foundation. It is very neutral on its own (hence, the name) and may require some modification according to your tastes. Though vanilla will still work too.</p>
+			<p>Blandcss is in the <a href="https://unlicense.org/">unlicense</a>. Feel free to use and/ or abuse</p>
+		</header>
+		<main id="site-main" role="main">
+			<h3>Typography</h3>
+			<p>All elements except <code>small</code>, and <code>sup/sub</code> use rem for size. So they change depending on the <code>font-size</code> of the <code>:root</code>.</p>
+			<p>The <code>font-size</code> of <code>:root</code> is also flexible. It use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()">clamp()</a> to create fluid typography.</p>
+			<h4>Scaling</h4>
+			<p>Blandcss use SASS to generate sizes. The default scale is 1.2. And the base size is the minimum font size which is 1rem. The calculations is like this:</p>
+			<ul>
+				<li>The size of
+					<code>.smaller</code>
+					is equal to 1rem * 1.2<sup>-2</sup>
+				</li>
+				<li>
+					<code>small</code>
+					is 1rem * 1.2<sup>-1</sup>
+				</li>
+				<li>
+					<code>p</code>
+					is 1rem * 1.2<sup>0</sup>
+				</li>
+				<li>
+					<code>h6</code>
+					is 1rem * 1.2<sup>1</sup>
+				</li>
+				<li>
+					<code>h5</code>
+					is 1rem * 1.2<sup>2</sup>
+				</li>
+				<li>
+					<code>h4</code>
+					is 1rem * 1.2<sup>3</sup>
+				</li>
+				<li>And so on until
+					<code>h1</code>
+				</li>
+			</ul>
+			<h5>Spacing</h5>
+			<p>
+				Blandcss use
+
+				<code>margin-top</code>
+				to spaced out block elements. Common block elements such as
+
+				<code>p</code>,
+				<code>img</code>,
+				<code>pre</code>
+				et cetera have
+
+				<code>margin-top</code>
+				the same size as
+
+				<code>.small</code>
+				or
+
+				<code>$base * $scale^-1</code>. However, the margin between
+				<b>p</b>aragraph
+				and other
+
+				<b>p</b>aragraph
+				is based on
+
+				<code>.smaller</code>.
+			</p>
+			<p>
+				Heading element from
+
+				<code>h6</code>
+				to
+
+				<code>h4</code>
+				have larger
+
+				<code>margin-top</code>
+				equal to the size of
+
+				<code>h4</code>, while
+				<code>h3</code>
+				to
+
+				<code>h1</code>
+				have
+
+				<code>h3</code>
+				size
+
+				<code>margin-top</code>.
+			</p>
+			<h3>Image</h3>
+			<img src="/assets/image/800x600.jpg" />
+
+			<h5>Image with captions</h5>
+			<figure>
+				<img src="/assets/image/800x600.jpg" />
+
+				<figcaption>bla bla bla</figcaption>
+			</figure>
+			<pre><code>&lt;figure>
+    &lt;img src="..."&gt;
+    &lt;figcaption>bla bla bla&lt;/figcaption>
+&lt;/figure></code></pre>
+			<h4>Centered Image</h4>
+			<img class="img-center" src="/assets/image/200.jpg" />
+
+			<pre><code>&lt;img <b>class="img-center"</b> src="..."&gt;</code></pre>
+			<h5>Centered figure with image</h5>
+			<figure class="img-center">
+				<img src="/assets/image/200.jpg" />
+
+				<figcaption>bla bla bla</figcaption>
+			</figure>
+			<pre><code>&lt;figure <b style="color:green">class="img-center"</b>>
+  &lt;img <strike style="color:red">class="img-center"</strike> src="..."&gt;
+  &lt;figcaption>bla bla bla&lt;/figcaption>
+&lt;/figure></code></pre>
+			<h4>Floating image for the retard</h4>
+			<p>Left floated image is possible for both
+				<code>img</code>
+				and
+
+				<code>figure</code>
+				<b>with image</b>
+				by adding class
+
+				<code>img-left</code>. But you need to make sure the content beside it is large enough to prevent it from
+				<a href="https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/03/collapse.png?w=540&ssl=1">collapsing</a>. Its maximum width and height is capped at 50% viewport width and height.
+			</p>
+			<figure class="img-left" style="border:1px solid red">
+				<img src="/assets/image/1024x768.jpg" />
+
+				<figcaption>Retarded floating image</figcaption>
+			</figure>
+			<p style="border:1px solid red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a viverra arcu, in aliquam tortor. Nam sit amet ex sapien. Nam et congue orci. Phasellus fermentum at metus sed pellentesque. Etiam sagittis nibh ac odio auctor egestas. In volutpat tellus quis neque aliquam sagittis sed non ante. Morbi mollis ipsum sed dolor maximus mollis. Integer quis nibh bibendum, ornare diam id, rhoncus erat. Phasellus congue turpis eu orci malesuada, tincidunt maximus nisl placerat. Mauris vitae magna cursus, suscipit arcu dapibus, facilisis lectus. Donec porta ex ac massa feugiat cursus. Mauris volutpat, urna ac maximus tristique, mauris tellus blandit tellus, ac feugiat erat nisi sit amet lectus.</p>
+			<h3>Blockquote</h3>
+			<blockquote>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales odio et orci consectetur aliquet. Proin sit amet ,felis vel tortor interdum viverra vel eu velit. Nulla vitae viverra libero. Mauris eu nunc maximus, interdum arcu in, interdum elit. Fusce nec libero ut magna elementum volutpat. Sed suscipit nisl dictum tincidunt placerat. Donec porttitor dolor metus, non tristique sapien interdum nec. Ut a viverra est, in congue purus. Ut quis ante eget sapien bibendum sollicitudin. Donec ut laoreet sem, eu pretium mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				</p>
+				<footer>Cicero</footer>
+			</blockquote>
+			<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, 
+    consectetur adipiscing elit. 
+    Suspendisse sodales odio et orci 
+    consectetur aliquet. Proin sit 
+    amet ,felis vel tortor interdum 
+    viverra vel eu velit. Nulla vitae 
+    viverra libero. Mauris eu nunc 
+    maximus, interdum arcu in, interdum 
+    elit. Fusce nec libero ut magna 
+    elementum volutpat. Sed suscipit 
+    nisl dictum tincidunt placerat. 
+    Donec porttitor dolor metus, non 
+    tristique sapien interdum nec. Ut a 
+    viverra est, in congue purus. Ut 
+    quis ante eget sapien bibendum 
+    sollicitudin. Donec ut laoreet sem, 
+    eu pretium mauris. Lorem ipsum 
+    dolor sit amet, consectetur 
+    adipiscing elit.
+  &lt;/p&gt;
+  &lt;footer&gt;Cicero&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+			<h3>Block code</h3>
+			<pre><code>#include &lt;stdio.h>
+int main() {
+  <span style="color:green;font-weight:500;">/* 
+  You have the lower body and you have no upper body, you got a problem building...wait a minute.
+  You have the upper body, and you have no legs, you got a problem building your legs.
+  You have the upper...you have the lower body and you don't have the upper body, the upper body, it is easier to build.
+  So if you have the lower body and you don't have the upper body, it is easier to build the upper body.
+  You have the upper body and you don't have the legs, you got a problem building the lower body...
+  No, you don't understand. You have the upper body, but you don't have the lower body, you got a problem building downstairs.
+  You got the up- legs on the bottom, it is easier to build on the top, so you don't have much as a problem.
+   */</span>
+  printf("Hello World");
+  return 0;
+}</code></pre>
+			<h3>List</h3>
+			<ol>
+				<li>Ordered list</li>
+				<li>Ordered list</li>
+				<li>Ordered list</li>
+				<li>Ordered list</li>
+				<li>Ordered list</li>
+			</ol>
+			<ul>
+				<li>Unordered list</li>
+				<li>Unordered list</li>
+				<li>Unordered list</li>
+				<li>Unordered list</li>
+				<li>Unordered list</li>
+			</ul>
+			<dl>
+				<dt>Descrition list</dt>
+				<dd>Descrition list</dd>
+				<dd>Descrition list</dd>
+				<dt>Descrition list</dt>
+				<dd>Descrition list</dd>
+				<dd>Descrition list</dd>
+				<dd>Descrition list</dd>
+			</dl>
+			<h4>Inconvenient List</h4>
+			<ol>
+				<li>Ordered list
+					<ul>
+						<li>Unordered list</li>
+						<li>Unordered list
+							<ol>
+								<li>Ordered list</li>
+								<li>Ordered list
+									<ul>
+										<li>Unordered list</li>
+										<li>Unordered list</li>
+									</ul>
+								</li>
+								<li>Ordered list</li>
+							</ol>
+						</li>
+						<li>Unordered list</li>
+					</ul>
+				</li>
+				<li>Ordered list</li>
+				<li>Ordered list
+					<ol>
+						<li>Ordered list</li>
+						<li>Ordered list</li>
+						<li>Ordered list</li>
+					</ol>
+				</li>
+				<li>Ordered list</li>
+				<li>Ordered list</li>
+			</ol>
+			<h3>Table</h3>
+			<p>The table must use <code>thead</code>, <code>tbody</code>, <code>tfoot</code> accordingly. It is also possible to have stripped table by adding <code>.stripped</code> class to table elements.</p>
+			<table class="stripped">
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Quantity</th>
+						<th>Price/kg</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Flesh</td>
+						<td>3kg</td>
+						<td>$250</td>
+					</tr>
+					<tr>
+						<td>Skins</td>
+						<td>1kg</td>
+						<td>$100</td>
+					</tr>
+					<tr>
+						<td>Bones</td>
+						<td>2kg</td>
+						<td>$120</td>
+					</tr>
+					<tr>
+						<td>Tears</td>
+						<td>0.5kg</td>
+						<td>$70</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">Total</td>
+						<td>$1125</td>
+					</tr>
+				</tfoot>
+				<caption>table 1.2</caption>
+			</table>
+			<pre><code>&lt;table class="stripped"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Item&lt;/th&gt;
+      &lt;th&gt;Quantity&lt;/th&gt;
+      &lt;th&gt;Price/kg&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Flesh&lt;/td&gt;
+      &lt;td&gt;3kg&lt;/td&gt;
+      &lt;td&gt;$250&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bones&lt;/td&gt;
+      &lt;td&gt;2kg&lt;/td&gt;
+      &lt;td&gt;$120&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Tears&lt;/td&gt;
+      &lt;td&gt;0.5kg&lt;/td&gt;
+      &lt;td&gt;$70&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&quot;2&quot;&gt;Total&lt;/td&gt;
+      &lt;td&gt;$1025&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;caption&gt;table 1.2&lt;/caption&gt;
+&lt;/table&gt;</code></pre>
+		</main>
+		<footer id="site-footer">
+			<h3>©</h3>
+		</footer>
+	</body>
+</html>
