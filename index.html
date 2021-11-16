@@ -10,18 +10,25 @@
 		<title>blandcss - A tasteless css boilerplate</title>
 		<link rel="stylesheet" href="blandcss.min.css" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
+		<style>
+			.heading-section {
+				text-decoration: underline
+			}
+		</style>
 	</head>
 	<body class="noise">
 		<header id="site-header">
 			<h1>Blandcss</h1>
 			<p>Blandcss is a small set of stylesheets which meant to be used as a foundation. It is very neutral on its own (hence, the name) and may require some modification according to your tastes. Though vanilla will still work too.</p>
-			<p>Blandcss is in the <a href="https://unlicense.org/">unlicense</a>. Feel free to use and/ or abuse</p>
+			<p>Blandcss is in the <a href="https://unlicense.org/" target="_blank">unlicense</a>. Feel free to use and/ or abuse</p>
 		</header>
 		<main id="site-main" role="main">
-			<h3>Typography</h3>
+			<h3 class="heading-section">Typography</h3>
 			<p>All elements except <code>small</code>, and <code>sup/sub</code> use rem for size. So they change depending on the <code>font-size</code> of the <code>:root</code>.</p>
 			<p>The <code>font-size</code> of <code>:root</code> is also flexible. It use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()">clamp()</a> to create fluid typography.</p>
-			<h4>Scaling</h4>
+			<h4 class="heading-section">Text</h4>
+			<p><code>code</code>, <b>bold</b>, <mark>mark</mark>, <a href="#">anchor</a>, <span style="color:red">.</span><span class="spoiler">spoiler</span>, <span style="color:red">.</span><span class="monospace">monospace</span>, <i>emphasized</i>, <small>small</small>, <span style="color:red">.</span><span class="smaller">smaller</span>, text<sub>subscript</sub>, text<sup>superscript</sup>.</p>
+			<h4 class="heading-section">Scaling</h4>
 			<p>Blandcss use SASS to generate sizes. The default scale is 1.2. And the base size is the minimum font size which is 1rem. The calculations is like this:</p>
 			<ul>
 				<li>The size of
@@ -52,6 +59,15 @@
 					<code>h1</code>
 				</li>
 			</ul>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+			<p>Paragraph</p>
+			<p><small>Small</small></p>
+			<p><b style="color:red">.</b><span class="smaller">smaller</span>. Also used by <code>sup</code> and <code>sub</code></p>
 			<h5>Spacing</h5>
 			<p>
 				Blandcss use
