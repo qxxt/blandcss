@@ -1,9 +1,13 @@
 a {
-	color: #3f72af;
+	color: #0000CD;
 	text-decoration: none;
 	
+	&:visited {
+		color: #9370DB;
+	}
+	
 	&:hover, &:active {
-		color: #112d4e;
+		color: #000080;
 		text-decoration: underline;
 	}
 }
