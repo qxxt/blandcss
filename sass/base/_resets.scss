@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+	
+	&::before, &::after {
+		box-sizing: border-box;
+		text-decoration: inherit;
+		vertical-align: inherit;
+	}
+}
+
+p,
+h1, h2, h3, h4, h5, h6,
+blockquote,
+pre,
+ol, ul, dl,
+table,
+figure, img,
+header, main, footer, article, aside, div, nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	display: block;
+}
+
+p,
+h1, h2, h3, h4, h5, h6,
+blockquote,
+pre,
+ol, ul, dl,
+table,
+figure, img {
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+code, pre {
+	font-size: 1em;
+	font-family: $code-font;
+}

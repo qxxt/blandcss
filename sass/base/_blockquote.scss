@@ -1,0 +1,17 @@
+blockquote {
+  padding: $smaller;
+  border-left: thick solid $grey-border;
+  background-color: $light-grey-bg;
+  color: $leading-color;
+  
+  footer {
+    color: $muted-color;
+    font-size: $small;
+    padding-left: $smaller;
+    font-style: italic;
+    
+    &:before {
+      content: "— ";
+    }
+  }
+}

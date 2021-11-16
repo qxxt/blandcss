@@ -1,0 +1,24 @@
+img {
+	max-width: 100%;
+}
+
+figure figcaption {
+	color: $muted-color;
+	font-size: $small;
+}
+
+img.img-center, figure.img-center img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+figure.img-center {
+	text-align: center;
+}
+
+img.img-left, figure.img-left {
+	float: left;
+	max-width: 50%;
+	max-height: 50%;
+	margin-right: $small;
+}

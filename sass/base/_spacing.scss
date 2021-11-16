@@ -1,0 +1,24 @@
+p,
+blockquote,
+pre,
+ol, ul, dl,
+table,
+figure, img {
+	margin-top: $smaller;
+}
+
+p + p {
+	margin-top: $smaller;
+}
+
+h1, h2, h3 {
+	margin-top: $heading3;
+}
+
+hr, br {
+	margin: $heading3 0;
+}
+
+h4, h5, h6 {
+	margin-top: $heading4;
+}

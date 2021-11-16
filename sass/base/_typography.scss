@@ -1,0 +1,75 @@
+html {
+	line-height: $line-height;
+	font-size: $min-fontsize;
+	font-size: calc-clamp($min-fontsize, $max-fontsize);
+	overflow-wrap: break-word;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: 100%;
+}
+
+@supports not (font-size: clamp(1,1,1)) {
+	@media (min-width: $b-m) {
+		html {
+			font-size: calc-responsive($min-fontsize, $max-fontsize, $b-m);
+		}
+	}
+	
+	@media (min-width: $b-l) {
+		html {
+			font-size: calc-responsive($min-fontsize, $max-fontsize, $b-l);
+		}
+	}
+	
+	@media (min-width: $b-xl) {
+		html {
+			font-size: calc-responsive($min-fontsize, $max-fontsize, $b-xl);
+		}
+	}
+}
+
+body {
+	font-family: $main-font;
+	font-weight: 400;
+	color: $main-color;
+	margin: .5rem;
+}
+
+.smaller, sub, sup {
+	font-size: strip-unit($smaller)+em;
+}
+
+.small, small {
+	font-size: strip-unit($small)+em;
+}
+
+h6 {
+	font-size: $heading6;
+}
+
+h5 {
+	font-size: $heading5;
+}
+
+h4 {
+	font-size: $heading4;
+}
+
+h3 {
+	font-size: $heading3;
+}
+
+h2 {
+	font-size: $heading2;
+}
+
+h1 {
+	font-size: $heading1;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong, b,
+dt
+{
+	color: $leading-color;
+	font-weight: 500;
+}

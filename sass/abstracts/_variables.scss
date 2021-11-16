@@ -1,0 +1,32 @@
+// font size
+$min-fontsize: 1rem;
+$max-fontsize: 2rem;
+$fontsize-scale: 1.2;
+$line-height: 1.5;
+
+// color
+$leading-color: #000;
+$main-color: #333;
+$muted-color: #666;
+$grey-border: #999;
+$light-grey-bg: #eee;
+
+// font
+$main-font: "IBM Plex Sans", "Helvetica Neue", Roboto, Arial, sans-serif;
+$code-font: "IBM Plex Mono", "Courier New", monospace;
+
+// scale
+$small: $min-fontsize / $fontsize-scale;
+$smaller: $small / $fontsize-scale;
+$heading6: $min-fontsize * $fontsize-scale;
+$heading5: $heading6 * $fontsize-scale;
+$heading4: $heading5 * $fontsize-scale;
+$heading3: $heading4 * $fontsize-scale;
+$heading2: $heading3 * $fontsize-scale;
+$heading1: $heading2 * $fontsize-scale;
+
+// breakpoints
+$b-s: 320px;
+$b-m: 768px;
+$b-l: 1024px;
+$b-xl: 1280px;

@@ -1,0 +1,44 @@
+a {
+	color: #3f72af;
+	text-decoration: none;
+	
+	&:hover, &:active {
+		color: #112d4e;
+		text-decoration: underline;
+	}
+}
+
+sub {
+	bottom: -.25em;
+}
+
+sup {
+	top: -.5em;
+}
+
+mark {
+	background-color: yellow;
+}
+
+hr {
+	border: 0;
+	border-top: thick solid $grey-border;
+}
+
+pre {
+	overflow: auto;
+	color: $leading-color;
+	padding: .25rem;
+	border: 1px solid $grey-border;
+}
+
+:not(pre) > code, pre {
+	font-family: $code-font;
+	background-color: $light-grey-bg;
+}
+
+:not(pre) > code, mark {
+	white-space: nowrap;
+	color: $leading-color;
+	padding: 0 2px;
+}

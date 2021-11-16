@@ -1,0 +1,14 @@
+ul, ol {
+  padding-left: $min-fontsize;
+  list-style-position: outside;
+}
+
+dl {
+  dt {
+    font-weight: 500;
+    color: $leading-color;
+  }
+  dd {
+    padding-left: $min-fontsize;
+  } 
+}

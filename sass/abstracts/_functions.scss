@@ -1,0 +1,26 @@
+@function strip-unit($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+@function calc-clamp (
+	$min-size,
+	$max-size
+) {
+	$b-s-rem: $b-s / 16px * 1rem;
+	$b-xl-rem: $b-xl / 16px * 1rem;
+	
+	$factor: 1 / ($b-xl-rem - $b-s-rem) * ($max-size - $min-size);
+	$calc-value: unquote("#{$min-size - ($b-s-rem * $factor)} + #{100vw * $factor}");
+	@return clamp( $min-size, $calc-value, $max-size );
+}
+
+@function calc-responsive (
+	$min-size,
+	$max-size,
+	$current-screen-width
+) {
+	@if $current-screen-width == $b-xl {
+		@return $max-size;
+}
+	@return ($current-screen-width - $b-s) / ($b-xl - $b-s) * ($max-size - $min-size) + $min-size;
+}
