@@ -8,6 +8,12 @@
 	}
 }
 
+html {
+	overflow-wrap: break-word;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: 100%;
+}
+
 p,
 h1, h2, h3, h4, h5, h6,
 blockquote,
@@ -36,7 +42,10 @@ figure, img {
 	}
 }
 
-code, pre {
+code, pre, mark {
 	font-size: 1em;
+}
+
+code {
 	font-family: $code-font;
 }

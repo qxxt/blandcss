@@ -4,7 +4,7 @@ pre,
 ol, ul, dl,
 table,
 figure, img {
-	margin-top: $smaller;
+	margin-top: $min-fontsize;
 }
 
 p + p {
@@ -20,5 +20,5 @@ hr, br {
 }
 
 h4, h5, h6 {
-	margin-top: $heading4;
+	margin-top: $heading5;
 }

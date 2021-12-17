@@ -2,18 +2,25 @@
 $min-fontsize: 1rem;
 $max-fontsize: 2rem;
 $fontsize-scale: 1.2;
-$line-height: 1.5;
+$line-height: 1.35;
 
 // color
-$leading-color: #000;
+$lead-color: #1a1a1a;
 $main-color: #333;
-$muted-color: #666;
-$grey-border: #999;
-$light-grey-bg: #eee;
+$muted-color: #4d4d4d;
+
+// block color
+$grey-border: #666;
+$grey-background: #eee;
+
+// anchor color
+$anchor-color: #006edb;
+$anchor-hover: #003161;
+$anchor-visited: #5800db;
 
 // font
-$main-font: "IBM Plex Sans", "Helvetica Neue", Roboto, Arial, sans-serif;
-$code-font: "IBM Plex Mono", "Courier New", monospace;
+$main-font: "IBM Plex Sans", sans-serif;
+$code-font: "Fira Mono", monospace;
 
 // scale
 $small: $min-fontsize / $fontsize-scale;

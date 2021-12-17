@@ -2,9 +2,6 @@ html {
 	line-height: $line-height;
 	font-size: $min-fontsize;
 	font-size: calc-clamp($min-fontsize, $max-fontsize);
-	overflow-wrap: break-word;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-text-size-adjust: 100%;
 }
 
 @supports not (font-size: clamp(1,1,1)) {
@@ -70,6 +67,6 @@ h1, h2, h3, h4, h5, h6,
 strong, b,
 dt
 {
-	color: $leading-color;
+	color: $lead-color;
 	font-weight: 500;
 }

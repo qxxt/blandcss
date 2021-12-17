@@ -1,13 +1,13 @@
 a {
-	color: #0000CD;
+	color: $anchor-color;
 	text-decoration: none;
 	
 	&:visited {
-		color: #9370DB;
+		color: $anchor-visited;
 	}
 	
 	&:hover, &:active {
-		color: #000080;
+		color: $anchor-hover;
 		text-decoration: underline;
 	}
 }
@@ -31,18 +31,19 @@ hr {
 
 pre {
 	overflow: auto;
-	color: $leading-color;
+	color: $lead-color;
 	padding: .25rem;
 	border: 1px solid $grey-border;
+	background-color: $grey-background;
 }
 
-:not(pre) > code, pre {
-	font-family: $code-font;
-	background-color: $light-grey-bg;
+:not(pre) > code {
+	background-color: $grey-background;
+	border: 1px solid $grey-border;
 }
 
 :not(pre) > code, mark {
 	white-space: nowrap;
-	color: $leading-color;
-	padding: 0 2px;
+	color: $lead-color;
+	padding: 1px;
 }
