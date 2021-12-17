@@ -119,6 +119,9 @@ img.img-left, figure.img-left {
   max-height: 50%;
   margin-right: 0.833rem; }
 
+@media (min-width: 1024px) {
+  img.img-left, figure.img-left {
+    max-width: 70%; } }
 ul, ol {
   padding-left: 1rem;
   list-style-position: outside; }

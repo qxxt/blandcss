@@ -22,3 +22,9 @@ img.img-left, figure.img-left {
 	max-height: 50%;
 	margin-right: $small;
 }
+
+	@media (min-width: $b-l) {
+		img.img-left, figure.img-left {
+			max-width: 70%;
+		}
+}
